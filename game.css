@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(rgb(88, 129, 177), rgb(52, 91, 216));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  background-color: rgb(39, 152, 197);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.restart button {
+  background-color: aqua;
+  padding: 10px 40px;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+span {
+  color: green;
+  font-weight: 900;
+}
+
+.gamecontainer {
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: 23%;
+  height: 23%;
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.card:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  background-color: rgb(125, 112, 112);
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  border-radius: 4px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+#gameOverMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 500px) {
+  .gamecontainer {
+    width: 260px;
+    height: 260px;
+    margin: 30px auto;
+  }
+
+  .score {
+    width: 150px;
+    height: 30px;
+  }
+
+  .restart button {
+    padding: 5px 30px;
+    margin: 20px auto;
+  }
+
+  .card {
+    width: 20%;
+    height: 20%;
+    margin: 2%;
+  }
+
+  .front,
+  .back {
+    padding: 2px;
+    width: 100%;
+    height: 110%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .gamecontainer {
+    width: 260px;
+    height: 400px;
+    margin: 30px auto;
+  }
+
+  .score {
+    width: 150px;
+    height: 30px;
+  }
+
+  .restart button {
+    padding: 5px 30px;
+  }
+
+  .card {
+    width: 20%;
+    height: 23%;
+    margin: 2%;
+  }
+
+  .front,
+  .back {
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+  }
+}
