@@ -17,7 +17,15 @@ Memory game is emoji cards game which i made using JAVASCRIPT , HTML AND CSS. an
 
 ## 🔗 Visit
 
-🔗 https://rutvikjani03.github.io/memorygame
+🔗 https://rutvikjani03.github.io/memorygame.
+
+## Features
+
+- Userfriendly design
+- +10 score for every success
+- (-5) score for every failure
+- Score shown after every complation. exp: Game Over! Youer score is xx
+- Restart button after every complation 
 
 ## 🔗 Links
 
